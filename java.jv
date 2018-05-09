@@ -1,0 +1,15 @@
+function Pessoa(nome, cidade, tempoNaCidade, anoNascimento) {
+	var pessoa = {
+	"nome": nome,
+	cidade: cidade,
+	tempoNaCidade: tempoNaCidade,
+	anoNascimento: anoNascimento,
+	data: Date.now()    
+
+};
+pessoa.idade = function() {
+	var dataAtual = new Date(Date.now());
+	return dataAtual.getFullYear() - this.anoNascimento;
+};
+return pessoa;
+};
